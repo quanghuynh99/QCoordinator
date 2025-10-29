@@ -15,7 +15,7 @@ enum AppStateEnum {
 
 final class AppState: NSObject, ObservableObject {
     @Published var userId: String = ""
-    @Published var appStateEnum: AppStateEnum = .authenticated
+    @Published var appStateEnum: AppStateEnum = .unAuthenticated
 
     static let shared = AppState()
 

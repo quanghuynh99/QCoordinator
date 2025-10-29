@@ -16,8 +16,6 @@ enum HomeRoute: Hashable {
 }
 
 final class HomeCoordinator: Coordinator {
-    typealias Route = HomeRoute
-
     func destination(for route: HomeRoute) -> DestinationView {
         switch route {
         case .home:

@@ -14,8 +14,6 @@ enum ProfileRoute {
 }
 
 final class ProfileCoordinator: Coordinator {
-    typealias Route = ProfileRoute
-
     func destination(for route: ProfileRoute) -> DestinationView {
         switch route {
         case .profile:

@@ -14,8 +14,6 @@ enum FileRoute {
 }
 
 final class FilesCoordinator: Coordinator {
-    typealias Route = FileRoute
-
     func destination(for route: FileRoute) -> DestinationView {
         switch route {
         case .dashboard:

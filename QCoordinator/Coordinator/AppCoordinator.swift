@@ -12,10 +12,11 @@ enum AppRoute: Hashable {
     case main
     case update
     case login
+
+    case register
 }
 
 final class AppCoordinator: Coordinator {
-    typealias Route = AppRoute
     @ObservedObject var appState = AppState.shared
 
     // MARK: coordinators
@@ -31,6 +32,8 @@ final class AppCoordinator: Coordinator {
             return DestinationView(UpdateView())
         case .login:
             return DestinationView(LoginView())
+        case .register:
+            return DestinationView(RegisterView())
         }
     }
 }

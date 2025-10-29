@@ -18,7 +18,7 @@ struct MainView: View {
             case .authenticated:
                 appCoordinator.destination(for: .main)
             case .unAuthenticated:
-                appCoordinator.destination(for: .login)
+                appCoordinator.destination(for: .register)
             case .forceUpdate:
                 appCoordinator.destination(for: .update)
             }

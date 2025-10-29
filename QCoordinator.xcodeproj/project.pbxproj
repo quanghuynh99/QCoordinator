@@ -7,14 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4A42F68CA0404A7D428440C0 /* Pods_QCoordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D695B2AA1C63B63833FDF4B9 /* Pods_QCoordinator.framework */; };
+		79D563C62EB0BE4B007AD7B5 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 79D563C52EB0BE4B007AD7B5 /* Alamofire */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		79D563D12EB0C3CE007AD7B5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		2F6B0CD9D414FCE4CD8A2236 /* Pods-QCoordinator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QCoordinator.release.xcconfig"; path = "Target Support Files/Pods-QCoordinator/Pods-QCoordinator.release.xcconfig"; sourceTree = "<group>"; };
 		79E054E62E9E268E0035F7F1 /* QCoordinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QCoordinator.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7E6B454CB1A2E58B68327FC6 /* Pods-QCoordinator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QCoordinator.debug.xcconfig"; path = "Target Support Files/Pods-QCoordinator/Pods-QCoordinator.debug.xcconfig"; sourceTree = "<group>"; };
-		D695B2AA1C63B63833FDF4B9 /* Pods_QCoordinator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QCoordinator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -30,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A42F68CA0404A7D428440C0 /* Pods_QCoordinator.framework in Frameworks */,
+				79D563C62EB0BE4B007AD7B5 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,7 +53,6 @@
 				79E054E82E9E268E0035F7F1 /* QCoordinator */,
 				79E054E72E9E268E0035F7F1 /* Products */,
 				D4C618295E590B1AEE4C8D9B /* Pods */,
-				845537275350D901CF87A787 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,19 +64,9 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		845537275350D901CF87A787 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D695B2AA1C63B63833FDF4B9 /* Pods_QCoordinator.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		D4C618295E590B1AEE4C8D9B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7E6B454CB1A2E58B68327FC6 /* Pods-QCoordinator.debug.xcconfig */,
-				2F6B0CD9D414FCE4CD8A2236 /* Pods-QCoordinator.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -79,10 +78,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79E054F32E9E26910035F7F1 /* Build configuration list for PBXNativeTarget "QCoordinator" */;
 			buildPhases = (
-				0A2A37AB398CB4FCC5DE6EB1 /* [CP] Check Pods Manifest.lock */,
 				79E054E22E9E268E0035F7F1 /* Sources */,
 				79E054E32E9E268E0035F7F1 /* Frameworks */,
 				79E054E42E9E268E0035F7F1 /* Resources */,
+				79D563D12EB0C3CE007AD7B5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -121,6 +120,9 @@
 			);
 			mainGroup = 79E054DD2E9E268E0035F7F1;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				79D563C42EB0BE4B007AD7B5 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 79E054E72E9E268E0035F7F1 /* Products */;
 			projectDirPath = "";
@@ -140,31 +142,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		0A2A37AB398CB4FCC5DE6EB1 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-QCoordinator-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		79E054E22E9E268E0035F7F1 /* Sources */ = {
@@ -300,7 +277,6 @@
 		};
 		79E054F42E9E26910035F7F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7E6B454CB1A2E58B68327FC6 /* Pods-QCoordinator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -330,7 +306,6 @@
 		};
 		79E054F52E9E26910035F7F1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2F6B0CD9D414FCE4CD8A2236 /* Pods-QCoordinator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -380,6 +355,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		79D563C42EB0BE4B007AD7B5 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = exactVersion;
+				version = 5.10.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		79D563C52EB0BE4B007AD7B5 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 79D563C42EB0BE4B007AD7B5 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 79E054DE2E9E268E0035F7F1 /* Project object */;
 }
